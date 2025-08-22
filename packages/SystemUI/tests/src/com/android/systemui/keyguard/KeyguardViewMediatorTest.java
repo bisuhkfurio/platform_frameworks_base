@@ -553,7 +553,7 @@ public class KeyguardViewMediatorTest extends SysuiTestCase {
         TestableLooper.get(this).processAllMessages();
         captureKeyguardUpdateMonitorCallback();
         assertFalse(mViewMediator.isShowingAndNotOccluded());
-        
+
         // WHEN lockdown occurs for current user
         when(mSelectedUserInteractor.getSelectedUserId()).thenReturn(0);
         when(mUpdateMonitor.isUserInLockdown(anyInt())).thenReturn(true);
